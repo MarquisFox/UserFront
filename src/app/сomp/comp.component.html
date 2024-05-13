@@ -1,0 +1,194 @@
+<div class="mainCont">
+  <div>
+    <select class="selectEl" [(ngModel)]= "selectedNki" (ngModelChange)="onChange($event)">
+      <option *ngFor="let option of nki">{{option.id}}</option>
+    </select>
+
+    <div class="testFlexCont">
+
+      <form class="pumpCont">
+        <div class="pumpName">{{nkiCurr.id}}</div>
+        <div class="pumpImage"><img class="imgPump" src="assets/images/comp.jpg"></div>
+        <div class="openData">
+          <div class="dataElement">
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.naming}}</div>
+              <div class="flex-value">{{nkiCurr.id}}</div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.k}}</div>
+              <div class="flex-value">{{nkiCurr.k}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.k}}" [(ngModel)]="trialNki.k" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.pbc}}</div>
+              <div class="flex-value">{{nkiCurr.pbc}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.pbc}}" [(ngModel)]="trialNki.pbc" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.f}}</div>
+              <div class="flex-value">{{nkiCurr.f}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.f}}" [(ngModel)]="trialNki.f" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.q}}</div>
+              <div class="flex-value">{{nkiCurr.q}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.q}}" [(ngModel)]="trialNki.q" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.mh20}}</div>
+              <div class="flex-value">{{nkiCurr.mh20}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.mh20}}" [(ngModel)]="trialNki.mh20" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.t_I_HOI2}}</div>
+              <div class="flex-value">{{nkiCurr.t_I_HOI2}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.t_I_HOI2}}" [(ngModel)]="trialNki.t_I_HOI2" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.t_I_HOI3}}</div>
+              <div class="flex-value">{{nkiCurr.t_I_HOI3}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.t_I_HOI3}}" [(ngModel)]="trialNki.t_I_HOI3" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nkiName.g}}</div>
+              <div class="flex-value">{{nkiCurr.g}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nkiCurr.g}}" [(ngModel)]="trialNki.g" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+
+
+
+            <div class="buttOpenDiv"><button (click)="postNki()" class="buttOpen" > Проверить показатели </button></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="doublePanel">
+        <div class="pumpName">Рассчёт результата</div>
+        <div class="formula"><img class="imgAll" src="assets/images/nkiRes.jpg"></div>
+        <div class="pumpName">Показатели/прогноз</div>
+
+        <div class="flexable">
+          <div class="flex-elem2">Название</div>
+          <div class="flex-value2">real</div>
+          <div class="flex-value2">analyst</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.sigma1}}</div>
+          <div class="flex-value2">{{receivedRes.sigma1}}</div>
+          <div class="flex-value2">{{dataRes.sigma1}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.sigma2}}</div>
+          <div class="flex-value2">{{receivedRes.sigma2}}</div>
+          <div class="flex-value2">{{dataRes.sigma2}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.sigma3}}</div>
+          <div class="flex-value2">{{receivedRes.sigma3}}</div>
+          <div class="flex-value2">{{dataRes.sigma3}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.thO1}}</div>
+          <div class="flex-value2">{{receivedRes.tho1}}</div>
+          <div class="flex-value2">{{dataRes.tho1}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.thO2}}</div>
+          <div class="flex-value2">{{receivedRes.tho2}}</div>
+          <div class="flex-value2">{{dataRes.tho2}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.thO3}}</div>
+          <div class="flex-value2">{{receivedRes.tho3}}</div>
+          <div class="flex-value2">{{dataRes.tho3}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.z}}</div>
+          <div class="flex-value2">{{receivedRes.z}}</div>
+          <div class="flex-value2">{{dataRes.z}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.tk1}}</div>
+          <div class="flex-value2">{{receivedRes.tk1}}</div>
+          <div class="flex-value2">{{dataRes.tk1}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.k2}}</div>
+          <div class="flex-value2">{{receivedRes.tk2}}</div>
+          <div class="flex-value2">{{dataRes.tk2}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.w1}}</div>
+          <div class="flex-value2">{{receivedRes.w1}}</div>
+          <div class="flex-value2">{{dataRes.w1}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.w2}}</div>
+          <div class="flex-value2">{{receivedRes.w2}}</div>
+          <div class="flex-value2">{{dataRes.w2}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.deltat1i}}</div>
+          <div class="flex-value2">{{receivedRes.deltaT1i}}</div>
+          <div class="flex-value2">{{dataRes.deltaT1i}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.deltat2i}}</div>
+          <div class="flex-value2">{{receivedRes.deltaT2i}}</div>
+          <div class="flex-value2">{{dataRes.deltaT2i}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.deltat3i}}</div>
+          <div class="flex-value2">{{receivedRes.deltaT3i}}</div>
+          <div class="flex-value2">{{dataRes.deltaT3i}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.eps1}}</div>
+          <div class="flex-value2">{{receivedRes.eps1}}</div>
+          <div class="flex-value2">{{dataRes.eps1}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.eps2}}</div>
+          <div class="flex-value2">{{receivedRes.eps2}}</div>
+          <div class="flex-value2">{{dataRes.eps2}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.eps3}}</div>
+          <div class="flex-value2">{{receivedRes.eps3}}</div>
+          <div class="flex-value2">{{dataRes.eps3}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.q1}}</div>
+          <div class="flex-value2">{{receivedRes.q1}}</div>
+          <div class="flex-value2">{{dataRes.q1}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.q2}}</div>
+          <div class="flex-value2">{{receivedRes.q2}}</div>
+          <div class="flex-value2">{{dataRes.q2}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.q3}}</div>
+          <div class="flex-value2">{{receivedRes.q3}}</div>
+          <div class="flex-value2">{{dataRes.q3}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nkiResName.nki}}</div>
+          <div class="flex-value2">{{receivedRes.nki}}</div>
+          <div class="flex-value2">{{dataRes.nki}}</div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="buttOpenDiv" *ngIf="toggle"><button class="buttOpen" (click)="updateDB()" onclick="window.location.reload();"> Изменить значения </button></div>
+  </div>
+
+  <div class="graphPlace"><div id="divPieChart"></div></div>
+
+</div>

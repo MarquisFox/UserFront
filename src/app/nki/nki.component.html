@@ -1,0 +1,83 @@
+<div class="nbi">
+
+  <div >Показатели компрессорной станции</div>
+
+  <div>
+    <button (click)="toggleData()" class="buttonForm"> Заданные/полученные параметры </button>
+  </div>
+
+
+  <div class="elem" *ngIf="toggle" >
+    <div class="dataElement" *ngFor="let item of nki">
+      <div class="headNaming">Объект</div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.k}}</div>
+        <div class="flex-value">{{item.k}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.pbc}}</div>
+        <div class="flex-value">{{item.pbc}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.f}}</div>
+        <div class="flex-value">{{item.f}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.q}}</div>
+        <div class="flex-value">{{item.q}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.th20}}</div>
+        <div class="flex-value">{{item.th20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.t_ATM}}</div>
+        <div class="flex-value">{{item.th20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.t_I_ATM}}</div>
+        <div class="flex-value">{{item.t_I_ATM}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.mh20}}</div>
+        <div class="flex-value">{{item.mh20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.t_I_HOI2}}</div>
+        <div class="flex-value">{{item.t_I_HOI2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.t_I_HOI2}}</div>
+        <div class="flex-value">{{item.t_I_HOI2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.g}}</div>
+        <div class="flex-value">{{item.g}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.sig1}}</div>
+        <div class="flex-value">{{item.sig1}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.sig2}}</div>
+        <div class="flex-value">{{item.sig2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.sig3}}</div>
+        <div class="flex-value">{{item.sig3}}</div>
+      </div>
+    </div>
+
+
+
+
+
+  <div>
+    <button (click)="toggleResult()" class="buttonForm"> Сравнение результатов компрессоров</button>
+  </div>
+
+
+
+
+
+</div>

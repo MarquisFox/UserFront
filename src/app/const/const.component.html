@@ -1,0 +1,22 @@
+<div>
+  <div class="elIn">
+    <div class="elHeader">
+      <a routerLink="">Авторизация</a>
+    </div>
+
+    <div class="elContent">
+      <div class="naming">
+        Почта
+      </div>
+      <input type="input" class="checkBox" [(ngModel)]="logs.email" [ngModelOptions] = "{standalone: true}">
+    </div>
+
+    <div class="elContent">
+      <div class="naming">
+        Пароль
+      </div>
+      <input type="input" class="checkBox" [(ngModel)]="logs.password" [ngModelOptions] = "{standalone: true}">
+    </div>
+    <div class="buttOpenDiv"><button class="buttOpen" (click)="auth()"> Войти </button></div>
+  </div>
+</div>

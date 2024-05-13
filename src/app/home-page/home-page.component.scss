@@ -1,0 +1,193 @@
+.imgHome {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  width: 90%;
+  height: 10em;
+}
+
+.img {
+  width: 100%;
+}
+
+.stats {
+  margin-top: 0.5em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ee7e27;
+  height: 2em;
+  font-size: 2em;
+  padding-top: 0.4em;
+}
+
+.obStats {
+  display: flex;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statsHead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.elCont {
+  margin-top: 1em;
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.elIn1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+  background-color: #ffa06c;
+  padding: 1em 1em 3em;
+}
+
+.elIn2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+  background-color: #ffa06c;
+  padding: 1em 1em 3em;
+}
+
+.elIn3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+  background-color: #ffa06c;
+  padding: 1em 1em 3em;
+}
+
+.elIn4 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+  background-color: #ffa06c;
+  padding: 1em 1em 3em;
+}
+
+.elIn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+  background-color: #ffa06c;
+  padding: 1em 1em 3em;
+}
+
+.elHeader {
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0.5em;
+
+  text-decoration: none
+}
+
+.elContent {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.naming {
+  width: 70%;
+  margin-left: 1em;
+  font-size: 1.4em;
+}
+
+.checkBox {
+  transform:scale(2);
+  opacity:0.9;
+  cursor:pointer;
+  display: table-cell;
+  vertical-align: middle;
+  height: 2em;
+}
+
+.buttCont {
+  width: 100%;
+  height: 3em;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.butt {
+  background-color: #ee7e27;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5em;
+}
+
+.butt:hover {
+  background-color: #654221;
+  color: white;
+}
+
+.model {
+  height: auto;
+  width: 100%;
+  background-color: #00acc1;
+}
+
+.elemName {
+  padding-top: 0.3em;
+  height: 1.8em;
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+  background-color: #ee7e27;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.elc {
+  width: 100%;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  text-align: center;
+  background-color: #db4437;
+}
+
+.headEl {
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.elb {
+  background-color: #999999;
+  width: 100%;
+  height: 20em;
+}
+
+.imgAll {
+  height: 20%;
+  width: 100%;
+}

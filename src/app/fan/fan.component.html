@@ -1,0 +1,123 @@
+<div class="mainCont">
+  <div>
+    <select class="selectEl" [(ngModel)]= "selectedNbi" (ngModelChange)="onChange($event)">
+      <option *ngFor="let option of nbi">{{option.id}}</option>
+    </select>
+
+    <div class="testFlexCont">
+
+      <form class="pumpCont">
+        <div class="pumpName">{{nbiCurr.id}}</div>
+        <div class="pumpImage"><img class="imgPump" src="assets/images/fan.jpg"></div>
+        <div class="openData">
+          <div class="dataElement">
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.naming}}</div>
+              <div class="flex-value">{{nbiCurr.id}}</div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.MH20}}</div>
+              <div class="flex-value">{{nbiCurr.mh20}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.mh20}}" [(ngModel)]="trialNbi.mh20" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.l0}}</div>
+              <div class="flex-value">{{nbiCurr.l0}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.l0}}" [(ngModel)]="trialNbi.l0" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.l1}}</div>
+              <div class="flex-value">{{nbiCurr.l1}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.l1}}" [(ngModel)]="trialNbi.l1" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.l2}}</div>
+              <div class="flex-value">{{nbiCurr.l2}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.l2}}" [(ngModel)]="trialNbi.l2" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.aor}}</div>
+              <div class="flex-value">{{nbiCurr.a0R}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.a0R}}" [(ngModel)]="trialNbi.a0R" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.h}}</div>
+              <div class="flex-value">{{nbiCurr.h}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.h}}" [(ngModel)]="trialNbi.h" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.kb}}</div>
+              <div class="flex-value">{{nbiCurr.kb}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.kb}}" [(ngModel)]="trialNbi.kb" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.kpdA}}</div>
+              <div class="flex-value">{{nbiCurr.kpdA}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.kpdA}}" [(ngModel)]="trialNbi.kpdA" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.C2}}</div>
+              <div class="flex-value">{{nbiCurr.c2}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.c2}}" [(ngModel)]="trialNbi.c2" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.k}}</div>
+              <div class="flex-value">{{nbiCurr.k}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.k}}" [(ngModel)]="trialNbi.k" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.epsE}}</div>
+              <div class="flex-value">{{nbiCurr.epsE}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.epsE}}" [(ngModel)]="trialNbi.epsE" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.E11}}</div>
+              <div class="flex-value">{{nbiCurr.e11}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.e11}}" [(ngModel)]="trialNbi.e11" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nbiName.E21}}</div>
+              <div class="flex-value">{{nbiCurr.e21}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nbiCurr.e21}}" [(ngModel)]="trialNbi.e21" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="buttOpenDiv"><button (click)="postNbi()" class="buttOpen" > Проверить показатели </button></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="doublePanel">
+        <div class="pumpName">Рассчёт результата</div>
+        <div class="formula"><img class="imgAll" src="assets/images/fanForm.jpg"></div>
+        <div class="pumpName">Показатели/прогноз</div>
+
+        <div class="flexable">
+          <div class="flex-elem2">Название</div>
+          <div class="flex-value2">real</div>
+          <div class="flex-value2">analyst</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{nbiResName.QAi}}</div>
+          <div class="flex-value2">{{receivedRes.qai}}</div>
+          <div class="flex-value2">{{dataRes.qai}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nbiResName.PvAi}}</div>
+          <div class="flex-value2">{{receivedRes.pvAi}}</div>
+          <div class="flex-value2">{{dataRes.pvAi}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nbiResName.NBi_element}}</div>
+          <div class="flex-value2">{{receivedRes.nbi}}</div>
+          <div class="flex-value2">{{dataRes.nbi}}</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="buttOpenDiv" *ngIf="toggle"><button class="buttOpen" (click)="updateDB()" onclick="window.location.reload();"> Изменить значения </button></div>
+  </div>
+
+  <div class="graphPlace"><div id="divPieChart"></div></div>
+
+</div>

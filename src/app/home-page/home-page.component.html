@@ -1,0 +1,154 @@
+<div>
+  <div class="stats">
+    <div class="obStats">
+      <div class="statsHead">
+        <a routerLink="">Математическая модель</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="model">
+    <img class="imgAll" src="assets/images/p4.jpg">
+  </div>
+
+  <div class="elemName">
+    Элементы системы
+  </div>
+
+  <div class = "elCont">
+    <div class="elIn1">
+      <div class="elHeader">
+        <a routerLink="pump">Насосы</a>
+      </div>
+
+      <div class="elContent">
+        <div class="naming">
+          pm-811
+        </div>
+        <input type="checkbox" class="checkBox" name="pump" [(ngModel)]="nh1" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          pm-811
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="pump" [(ngModel)]="nh2" [ngModelOptions] = "{standalone: true}">
+      </div>
+
+      <div class="elContent">
+        <div class="naming">
+          pm-811
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="pump" [(ngModel)]="nh3" [ngModelOptions] = "{standalone: true}">
+      </div>
+
+
+    </div>
+    <div class="elIn2">
+      <div class="elHeader">
+        <a routerLink="fan">Вентиляторы в градирне</a>
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          aero-mh-491
+        </div>
+        <input type="checkbox" class="checkBox" name="fan" [(ngModel)]="nb1" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          aero-mh-491
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="fan" [(ngModel)]="nb2" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          aero-mh-491
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="fan" [(ngModel)]="nb3" [ngModelOptions] = "{standalone: true}">
+      </div>
+    </div>
+
+    <div class="elIn3">
+      <div class="elHeader">
+        <a routerLink="comp">Компрессоры</a>
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          d-6
+        </div>
+        <input type="checkbox" class="checkBox" name="comp" [(ngModel)]="nk1" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          d-6
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="comp" [(ngModel)]="nk2" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          d-6
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="comp" [(ngModel)]="nk3" [ngModelOptions] = "{standalone: true}">
+      </div>
+    </div>
+  </div>
+
+  <div class = "elCont">
+    <div class="elIn4">
+      <div class="elHeader">
+        <a routerLink="damage">Модуляция цехов</a>
+      </div>
+
+      <div class="elContent">
+        <div class="naming">
+          Цех a-1
+        </div>
+        <input type="checkbox" class="checkBox" name="ujv" [(ngModel)]="uj1" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          Цех a-2
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="ujv" [(ngModel)]="uj2" [ngModelOptions] = "{standalone: true}">
+      </div>
+      <div class="elContent">
+        <div class="naming">
+          Цех б-4
+        </div>
+        <input type="checkbox" class="checkBox" checked="checked" name="ujv" [(ngModel)]="uj3" [ngModelOptions] = "{standalone: true}">
+      </div>
+
+    </div>
+    <div class="elIn">
+      <div class="elHeader">
+        <a routerLink="res">Результат расчёта</a>
+      </div>
+    </div>
+    <div class="elIn">
+      <div class="elHeader">
+        <a routerLink="">Получение данных с датчиков</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="buttCont">
+    <button class="butt" (click)="counterF1()">Подтвердить изменения</button>
+  </div>
+
+
+  <div class="elc">
+    <div class="headEl">Зависимости системы от насосов</div>
+    <div class="elb" id="nkiChar"></div>
+
+<!--    <div class="headEl">Зависимости системы от градирни</div>-->
+<!--    <div class="elb" id="nbiChar"></div>-->
+
+    <div class="headEl">Зависимости системы от настройки компрессоров</div>
+    <div class="elb" id="nhiChar"></div>
+
+    <div class="headEl">Зависимости системы от модуляции цехов</div>
+    <div class="elb" id="ujChar"></div>
+
+  </div>
+
+</div>

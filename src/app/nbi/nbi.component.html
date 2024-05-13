@@ -1,0 +1,167 @@
+<div class="nbi">
+
+  <div >Показатели мощности вентялаторов</div>
+
+  <div>
+    <button (click)="toggleData()" class="buttonForm"> Заданные/полученные параметры</button>
+  </div>
+
+
+  <div class="elem" *ngIf="toggle" >
+    <div class="dataElement">
+      <div class="headNaming">Объект</div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.TH20}}</div>
+        <div class="flex-value">{{nbiObj.TH20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.T1H20}}</div>
+        <div class="flex-value">{{nbiObj.T1H20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.MH20}}</div>
+        <div class="flex-value">{{nbiObj.MH20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.ro}}</div>
+        <div class="flex-value">{{nbiObj.ro}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.l0}}</div>
+        <div class="flex-value">{{nbiObj.l0}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.l1}}</div>
+        <div class="flex-value">{{nbiObj.l1}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.l2}}</div>
+        <div class="flex-value">{{nbiObj.l2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.A0R}}</div>
+        <div class="flex-value">{{nbiObj.A0R}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.h}}</div>
+        <div class="flex-value">{{nbiObj.h}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.deltaT}}</div>
+        <div class="flex-value">{{nbiObj.deltaT}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.kb}}</div>
+        <div class="flex-value">{{nbiObj.kb}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.kpdA}}</div>
+        <div class="flex-value">{{nbiObj.kpdA}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.C2}}</div>
+        <div class="flex-value">{{nbiObj.C2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.lambda}}</div>
+        <div class="flex-value">{{nbiObj.lambda}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.k}}</div>
+        <div class="flex-value">{{nbiObj.k}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.epsE}}</div>
+        <div class="flex-value">{{nbiObj.epsE}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.E11}}</div>
+        <div class="flex-value">{{nbiObj.E11}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.E21}}</div>
+        <div class="flex-value">{{nbiObj.E21}}</div>
+      </div>
+    </div>
+
+    <div class="dataElement">
+      <div class="headNaming">Объект</div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.TH20}}</div>
+        <div class="flex-value">{{nbiObj.TH20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.T1H20}}</div>
+        <div class="flex-value">{{nbiObj.T1H20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.MH20}}</div>
+        <div class="flex-value">{{nbiObj.MH20}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.ro}}</div>
+        <div class="flex-value">{{nbiObj.ro}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.l0}}</div>
+        <div class="flex-value">{{nbiObj.l0}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.l1}}</div>
+        <div class="flex-value">{{nbiObj.l1}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.l2}}</div>
+        <div class="flex-value">{{nbiObj.l2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.A0R}}</div>
+        <div class="flex-value">{{nbiObj.A0R}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.h}}</div>
+        <div class="flex-value">{{nbiObj.h}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.deltaT}}</div>
+        <div class="flex-value">{{nbiObj.deltaT}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.kb}}</div>
+        <div class="flex-value">{{nbiObj.kb}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.kpdA}}</div>
+        <div class="flex-value">{{nbiObj.kpdA}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.C2}}</div>
+        <div class="flex-value">{{nbiObj.C2}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.lambda}}</div>
+        <div class="flex-value">{{nbiObj.lambda}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.k}}</div>
+        <div class="flex-value">{{nbiObj.k}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.epsE}}</div>
+        <div class="flex-value">{{nbiObj.epsE}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.E11}}</div>
+        <div class="flex-value">{{nbiObj.E11}}</div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.E21}}</div>
+        <div class="flex-value">{{nbiObj.E21}}</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

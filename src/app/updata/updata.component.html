@@ -1,0 +1,95 @@
+<div class="nbi">
+
+  <div >Показатели компрессорной станции</div>
+
+  <div>
+    <button (click)="toggleData()" class="buttonForm"> Заданные/полученные параметры </button>
+  </div>
+
+
+  <div class="elem" *ngIf="toggle" >
+    <div class="dataElement">
+      <div class="headNaming">Объект 1</div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.K}}</div>
+        <div class="flx">
+          <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.K}}"> </div>
+          <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.K}}"> </div>
+        </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.PBC}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.PBC}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.R}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.R}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.F}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.F}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.Q}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.Q}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.TH20}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.TH20}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.T_ATM}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.T_ATM}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.T_I_ATM}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.T_I_ATM}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.MH20}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.MH20}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.C_Air}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.C_Air}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.C_water}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.C_water}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.T_I_HOI2}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.T_I_HOI2}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.T_I_HOI3}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.T_I_HOI3}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.G}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.G}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.sig1}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.sig1}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.sig2}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.sig2}}"> </div>
+      </div>
+      <div class="flexable">
+        <div class="flex-elem">{{naming.sig3}}</div>
+        <div class="flex-value"><input class="inpt" placeholder="{{nbiObj.sig3}}"> </div>
+      </div>
+    </div>
+
+    <div>
+      <button class="buttonForm"> Проверить параметры </button>
+    </div>
+  </div>
+
+
+
+
+
+</div>

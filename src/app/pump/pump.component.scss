@@ -1,0 +1,142 @@
+.mainCont {
+  background-color: #00acc1;
+  width: 100%;
+  margin: 1em auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1vw;
+}
+
+.pumpCont {
+  width: 62%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pumpName {
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+}
+
+.pumpImage {
+  width: 100%;
+  height: 20em;
+  background-color: #5a5a5a;
+}
+
+.openData {
+  width: 100%;
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.dataElement {
+  margin-bottom: 1em;
+}
+
+.headNaming {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.flexable{
+  display: flex;
+  font-size: 2em;
+  border-bottom: 1px dashed #3f1c1c;
+}
+
+.flex-elem{
+  width: 58%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex-value{
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 0.2em;
+}
+
+.testFlexCont {
+  display: flex;
+}
+
+.doublePanel {
+  width: 38%;
+}
+
+.formula {
+  width: 100%;
+  height: 20em;
+  background-color: #999999;
+}
+
+
+.flex-elem2{
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0.2em;
+}
+
+.flex-value2{
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.buttOpenDiv {
+  width: 100%;
+  height: 3em;
+  margin: 1em auto auto;
+}
+
+.buttOpen {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 2em;
+  background-color: #ffbb95;
+}
+
+.formIn {
+  font-size: 1.3em;
+  width: 95%;
+  border: none;
+  margin-top: 0.2em;
+}
+
+.selectEl {
+  font-size: 1.3em;
+  width: 100%;
+  border: none;
+  margin-top: 0.2em;
+  margin-bottom: 0.0em;
+  font-size: 1.7em;
+}
+
+.graphPlace {
+  width: 100%;
+  height: 20em;
+  background-color: #db4437;
+}
+
+.imgAll {
+  width: 100%;
+  padding-top: 12%;
+}
+
+.imgPump {
+  height: 100%;
+  padding-left: 25%;
+}

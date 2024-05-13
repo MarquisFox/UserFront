@@ -1,0 +1,136 @@
+<div class="mainCont">
+  <div>
+    <select class="selectEl" [(ngModel)]= "selectedUj" (ngModelChange)="onChange($event)">
+      <option *ngFor="let option of uj">{{option.id}}</option>
+    </select>
+
+    <div class="testFlexCont">
+
+      <form class="pumpCont">
+        <div class="pumpName">{{ujCurr.id}}</div>
+        <div class="pumpImage"><img class="imgPump" src="assets/images/uj.jpg"></div>
+        <div class="openData">
+          <div class="dataElement">
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.naming}}</div>
+              <div class="flex-value">{{ujCurr.id}}</div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.qkp_i}}</div>
+              <div class="flex-value">{{ujCurr.qkP_i}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.qkP_i}}" [(ngModel)]="trialUj.qkP_i" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.p_i}}</div>
+              <div class="flex-value">{{ujCurr.p_i}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.p_i}}" [(ngModel)]="trialUj.p_i" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.n_i}}</div>
+              <div class="flex-value">{{ujCurr.n_i}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.n_i}}" [(ngModel)]="trialUj.n_i" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.q_i}}</div>
+              <div class="flex-value">{{ujCurr.q_i}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.q_i}}" [(ngModel)]="trialUj.q_i" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.lk_i}}</div>
+              <div class="flex-value">{{ujCurr.lk_i}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.lk_i}}" [(ngModel)]="trialUj.lk_i" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.qk_i}}</div>
+              <div class="flex-value">{{ujCurr.qk_i}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.qk_i}}" [(ngModel)]="trialUj.qk_i" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.pmin}}</div>
+              <div class="flex-value">{{ujCurr.pmin}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.pmin}}" [(ngModel)]="trialUj.pmin" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.pmax}}</div>
+              <div class="flex-value">{{ujCurr.pmax}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.pmax}}" [(ngModel)]="trialUj.pmax" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.epsilon}}</div>
+              <div class="flex-value">{{ujCurr.epsilon}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.epsilon}}" [(ngModel)]="trialUj.epsilon" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+            <div class="flexable">
+              <div class="flex-elem">{{ujName.ci}}</div>
+              <div class="flex-value">{{ujCurr.ci}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{ujCurr.ci}}" [(ngModel)]="trialUj.ci" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+
+
+            <div class="buttOpenDiv"><button (click)="postUj()" class="buttOpen" > Проверить показатели </button></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="doublePanel">
+        <div class="pumpName">Рассчёт результата</div>
+        <div class="formula"><img class="imgAll" src="assets/images/ujRes.jpg"></div>
+        <div class="pumpName">Показатели/прогноз</div>
+
+        <div class="flexable">
+          <div class="flex-elem2">Название</div>
+          <div class="flex-value2">real</div>
+          <div class="flex-value2">analyst</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{ujResName.U}}</div>
+          <div class="flex-value2">{{receivedRes.u}}</div>
+          <div class="flex-value2">{{dataRes.u}}</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{ujResName.Ui}}</div>
+          <div class="flex-value2">{{receivedRes.ui}}</div>
+          <div class="flex-value2">{{dataRes.ui}}</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{ujResName.UjDeltaPj}}</div>
+          <div class="flex-value2">{{receivedRes.ujDeltaPj}}</div>
+          <div class="flex-value2">{{dataRes.ujDeltaPj}}</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{ujResName.deltaPj}}</div>
+          <div class="flex-value2">{{receivedRes.deltaPj}}</div>
+          <div class="flex-value2">{{dataRes.deltaPj}}</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{ujResName.PTj}}</div>
+          <div class="flex-value2">{{receivedRes.ptj}}</div>
+          <div class="flex-value2">{{dataRes.ptj}}</div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div class="buttOpenDiv" *ngIf="toggle"><button class="buttOpen" (click)="updateDB()" onclick="window.location.reload();"> Изменить значения </button></div>
+  </div>
+
+  <div class="graphPlace"><div id="divPieChart"></div></div>
+
+</div>

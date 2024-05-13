@@ -1,0 +1,97 @@
+<div class="mainCont">
+  <div>
+    <select class="selectEl" [(ngModel)]= "selectedNhi" (ngModelChange)="onChange($event)">
+      <option *ngFor="let option of nhi">{{option.id}}</option>
+    </select>
+
+    <div class="testFlexCont">
+
+      <form class="pumpCont">
+        <div class="pumpName">{{nhiCurr.id}}</div>
+        <div class="pumpImage"><img class="imgPump" src="assets/images/pump.png"></div>
+        <div class="openData">
+          <div class="dataElement">
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.naming}}</div>
+              <div class="flex-value">{{nhiCurr.id}}</div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.nu_ed}}</div>
+              <div class="flex-value">{{nhiCurr.nu_ed}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.nu_ed}}" [(ngModel)]="trialNhi.nu_ed" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.nu_pr}}</div>
+              <div class="flex-value">{{nhiCurr.nu_pr}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.nu_pr}}" [(ngModel)]="trialNhi.nu_pr" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.nu_n}}</div>
+              <div class="flex-value">{{nhiCurr.nu_n}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.nu_n}}" [(ngModel)]="trialNhi.nu_n" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.H}}</div>
+              <div class="flex-value">{{nhiCurr.h}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.h}}" [(ngModel)]="trialNhi.h" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.n}}</div>
+              <div class="flex-value">{{nhiCurr.n}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.n}}" [(ngModel)]="trialNhi.n" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.n_nom}}</div>
+              <div class="flex-value">{{nhiCurr.n_nom}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.n_nom}}" [(ngModel)]="trialNhi.n_nom" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.H_P}}</div>
+              <div class="flex-value">{{nhiCurr.h_P}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.h_P}}" [(ngModel)]="trialNhi.h_P" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.H_F}}</div>
+              <div class="flex-value">{{nhiCurr.h_F}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.h_F}}" [(ngModel)]="trialNhi.h_F" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="flexable">
+              <div class="flex-elem">{{nhiName.Q_B_H20}}</div>
+              <div class="flex-value">{{nhiCurr.q_B_H20}}</div>
+              <div class="flex-value"><input class="formIn" type="number" value="{{nhiCurr.q_B_H20}}" [(ngModel)]="trialNhi.q_B_H20" [ngModelOptions] = "{standalone: true}"></div>
+            </div>
+            <div class="buttOpenDiv"><button (click)="postNhi()" class="buttOpen" > Проверить показатели </button></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="doublePanel">
+        <div class="pumpName">Рассчёт результата</div>
+        <div class="formula"><img class="imgAll" src="assets/images/nhi.jpg"></div>
+        <div class="pumpName">Показатели/прогноз</div>
+
+        <div class="flexable">
+          <div class="flex-elem2">Название</div>
+          <div class="flex-value2">real</div>
+          <div class="flex-value2">analyst</div>
+        </div>
+
+        <div class="flexable">
+          <div class="flex-elem2">{{nhiResName.QH20}}</div>
+          <div class="flex-value2">{{receivedRes.qh20}}</div>
+          <div class="flex-value2">{{dataRes.qh20}}</div>
+        </div>
+        <div class="flexable">
+          <div class="flex-elem2">{{nhiResName.NHi_element}}</div>
+          <div class="flex-value2">{{receivedRes.nhi_element}}</div>
+          <div class="flex-value2">{{dataRes.nhi_element}}</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="buttOpenDiv" *ngIf="toggle"><button class="buttOpen" (click)="updateDB()" onclick="window.location.reload();"> Изменить значения </button></div>
+  </div>
+
+  <div class="graphPlace"><div id="divPieChart"></div></div>
+
+</div>
